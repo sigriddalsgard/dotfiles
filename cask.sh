@@ -9,3 +9,4 @@ ok cask flash
 ok cask java
 ok cask spotify
 ok cask vlc
+ok cask skype
