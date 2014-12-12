@@ -1,0 +1,68 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Pathogen
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" General settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+runtime! plugin/sensible.vim    " Load sensible defaults
+
+set ignorecase                  " Ignore case when searching
+set smartcase                   " When searching try to be smart about cases
+
+set hlsearch                    " Highlight search results
+
+set lazyredraw                  " Don't redraw while executing macros (good performance config)
+
+set noerrorbells                " No annoying sound on errors
+set novisualbell
+
+set clipboard=unnamed           " Use the OS clipboard by default (on versions compiled with `+clipboard`)
+set ttyfast                     " Optimize for fast terminal connections
+set gdefault                    " Add the g flag to search/replace by default
+set updatetime=750              " Faster update time (things like gitgutter)
+
+set backupdir=~/.vim/backups    " Centralize backups, swapfiles and undo history
+set directory=~/.vim/swaps
+set undodir=~/.vim/undo
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Color and font settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+colorscheme smyck
+
+hi clear VertSplit              " Clear highlight of vertical split and sign column
+hi clear SignColumn
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Editing settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set showmatch                   " Show matching braces when over one
+set number                      " Enable line numbers
+set nostartofline               " Don't reset cursor to start of line when moving around.
+set shortmess=atI               " Don't show the intro message when starting Vim
+set title                       " Show the filename in the window titlebar
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Airline
+let g:airline_left_sep = ""     " Don't use fancy separators
+let g:airline_right_sep = ""
+
+" Tmuxline
+let g:tmuxline_powerline_separators = 0
+
+" CtrlP
+let g:ctrlp_show_hidden = 1     " Show hidden files
+let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|DS_Store\|git'
+
+" NeoComplCache
+let g:neocomplcache_enable_at_startup = 1
