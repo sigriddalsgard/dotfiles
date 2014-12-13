@@ -26,6 +26,7 @@ alias lsd="ls -lF | grep '^d'"
 alias g="git"
 alias h="history"
 alias j="jobs"
+alias gr="gradle"
 
 # Git aliases
 alias gl="git pull --prune"
@@ -53,3 +54,7 @@ alias reload="exec $SHELL -l"
 
 # Pipe public key to clipboard.
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
+
+# Gradle aliases
+alias grr="gradle run"
+alias grc="gradle compile"
