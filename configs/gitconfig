@@ -5,7 +5,7 @@
 [core]
   # Set default editor (for commit and merge messages)
   editor = vim
-  
+
   # Use custom `.gitignore` and `.gitattributes`
   excludesfile = ~/.gitignore
   attributesfile = ~/.gitattributes
@@ -29,5 +29,12 @@
   name = Sigrid Gyldenkaerne Dalsgard
   email = sigrid.dalsgard@gmail.com
 
+[alias]
+  last-commit = "checkout ."
+
 [push]
   default = simple
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
