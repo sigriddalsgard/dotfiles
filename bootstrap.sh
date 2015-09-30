@@ -9,4 +9,5 @@ include cask.sh
 include etc.sh
 include vim.sh
 include fish.sh
+include zsh.sh
 include osx.sh
